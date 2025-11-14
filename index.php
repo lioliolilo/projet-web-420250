@@ -57,6 +57,41 @@
 
                 <!-- liste des services -->
                 <div class="services-liste">
+
+                    <article class="service-card">
+                        <h3>Programmation orientée objet</h3>
+                        <p>Aide pour les bases de la programmation, les travaux pratiques, les conditions, boucles et
+                            fonctions.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Mathématique</h3>
+                        <p>Soutien au cours de mathématiques dans le programme d'informatique.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Développement Web</h3>
+                        <p>Assistance en HTML, CSS, JavaScript, formulaires, mise en page, responsive design.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Bases de données (SQL)</h3>
+                        <p>Aide pour les requêtes, la modélisation, les jointures, les clés étrangères et la
+                            manipulation de données.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Réseautique</h3>
+                        <p>Support pour la configuration réseau, Linux, commandes de base, architecture des systèmes.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Accompagnement sur les TP / Devoirs</h3>
+                        <p>Encadrement pour les travaux pratiques, projets d’équipe et préparation aux évaluations
+                            informatiques.</p>
+                    </article>
+
                 </div>
             </div>
         </section>
