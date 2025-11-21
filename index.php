@@ -13,7 +13,7 @@
     <!-- header -->
     <header class="site-header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="index.php" class="logo">
                 <img src="images/CollegeAhuntsic_Logo.png" alt="Logo du Collège Ahuntsic">
                 <span class="site-title">Tuto+</span>
             </a>
@@ -26,6 +26,7 @@
                     <li><a href="#tuteurs">Nos tuteurs</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="espace-etudiant.html">Espace étudiant</a></li>
+                    <li><a href="calendrier.php">Calendrier</a></li>
                 </ul>
             </nav>
         </div>
