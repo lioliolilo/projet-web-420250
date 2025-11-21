@@ -16,12 +16,6 @@ try {
     die("Erreur de connexion : " . $e->getMessage());
 }
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
-$currentUserId = $_SESSION['user_id'];
-
 // ==================================================================
 // DATE & TEMPS
 // ==================================================================
@@ -76,14 +70,12 @@ $sql = "
     FROM rendez_vous r
     LEFT JOIN etudiants e ON r.id_etudiant = e.id_etudiant
     LEFT JOIN tuteurs t ON r.id_tuteur = t.id_tuteur
-    WHERE ($roleCondition)
-    AND r.date_rdv BETWEEN :startDate AND :endDate
+    WHERE r.date_rdv BETWEEN :startDate AND :endDate
 ";
 
 try {
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
-            ':myId'      => $currentUserId,
             ':startDate' => $monday->format('Y-m-d'),
             ':endDate'   => $sunday->format('Y-m-d')
     ]);
@@ -97,13 +89,11 @@ try {
         $minute = intval($timeParts[1]);
         $startTimeDecimal = $hour + ($minute / 60);
 
-        if ($_SESSION['role'] == 'etudiant') {
-            $title = $rv['tuteur_prenom'] . " " . $rv['tuteur_nom'];
-            $sub = "Tutorat";
-        } else {
-            $title = $rv['etudiant_prenom'] . " " . $rv['etudiant_nom'];
-            $sub = "Cours";
-        }
+        $studentName = $rv['etudiant_prenom'] . " " . $rv['etudiant_nom'];
+        $tutorName = $rv['tuteur_prenom'] . " " . $rv['tuteur_nom'];
+
+        $title = $studentName;
+        $sub = "avec " . $tutorName;
 
         if (!isset($events[$rvDate])) {
             $events[$rvDate] = [];
@@ -114,7 +104,8 @@ try {
                 'subtitle' => $sub,
                 'room'     => $rv['salle'] ?? 'Biblio',
                 'start'    => $startTimeDecimal,
-                'duration' => floatval($rv['duree'])
+                'duration' => floatval($rv['duree']),
+                'status'   => $rv['statut']
         ];
     }
 
