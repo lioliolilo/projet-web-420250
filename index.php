@@ -24,9 +24,8 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#fonctionnement">Comment ça fonctionne ?</a></li>
                     <li><a href="#tuteurs">Nos tuteurs</a></li>
-                    <li><a href="#contact">Contact</a></li>
                     <li><a href="index.php#contact">Contact</a></li>
-
+                    <li><a href="demande.php">Demande</a></li>
                     <li><a href="etudiant.php">Espace étudiant</a></li>
                     <li><a href="tuteur.php">Espace tuteur</a></li>
                     <li><a href="admin.php">Admin</a></li>
