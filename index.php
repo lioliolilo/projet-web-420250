@@ -54,9 +54,6 @@
             <div class="container">
                 <header class="section-header">
                     <h2>Services de tutorat offerts</h2>
-                    <p>
-                        Voici les service offert par Tuto+.
-                    </p>
                 </header>
 
                 <!-- liste des services -->
@@ -64,36 +61,33 @@
 
                     <article class="service-card">
                         <h3>Programmation orientée objet</h3>
-                        <p>Aide pour les bases de la programmation, les travaux pratiques, les conditions, boucles et
-                            fonctions.</p>
+                        <p>Accompagnement pour mieux comprendre la logique de programmation Java</p>
                     </article>
 
                     <article class="service-card">
                         <h3>Mathématique</h3>
-                        <p>Soutien au cours de mathématiques dans le programme d'informatique.</p>
+                        <p>Soutien au cours de mathématiques en cadre du programme d'informatique</p>
                     </article>
 
                     <article class="service-card">
                         <h3>Développement Web</h3>
-                        <p>Assistance en HTML, CSS, JavaScript, formulaires, mise en page, responsive design.</p>
+                        <p>Assistance en HTML, CSS, JavaScript et les bases d'un site web moderne</p>
                     </article>
 
                     <article class="service-card">
                         <h3>Bases de données (SQL)</h3>
-                        <p>Aide pour les requêtes, la modélisation, les jointures, les clés étrangères et la
-                            manipulation de données.</p>
+                        <p>Aide pour comprendre les requêtes SQL, les bases de données, les jointures et la gestion des données</p>
                     </article>
 
                     <article class="service-card">
                         <h3>Réseautique</h3>
-                        <p>Support pour la configuration réseau, Linux, commandes de base, architecture des systèmes.
+                        <p>Support pour la configuration réseau et Linux
                         </p>
                     </article>
 
                     <article class="service-card">
                         <h3>Accompagnement sur les TP / Devoirs</h3>
-                        <p>Encadrement pour les travaux pratiques, projets d’équipe et préparation aux évaluations
-                            informatiques.</p>
+                        <p>Encadrement pour les travaux pratiques, les projets d’équipe et la préparation aux examens</p>
                     </article>
 
                 </div>
