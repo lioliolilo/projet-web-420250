@@ -1,15 +1,14 @@
-
 :root {
-    --couleur-principale: #d10000;   
-    --couleur-secondaire: #bdbdbd;   
-    --couleur-fond: #f5f5f5;
-    --couleur-texte: #333333;
+    --couleur-principale: #d10000;
+    --couleur-secondaire: #bdbdbd;
+    --couleur-fond: #ffffff;
+    --couleur-texte: #000000;
     --font-principale: Arial, Helvetica, sans-serif;
     --slot-height: 50px;
 }
 
 /* --- CALENDIER --- */
-.calendar-content-wrapper{
+.calendar-content-wrapper {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
     color: #333;
@@ -17,6 +16,7 @@
     margin-right: 10vw;
     margin-top: 20px;
 }
+
 /* --- nav --- */
 .cal-nav-bar {
     display: flex;
@@ -31,15 +31,18 @@
 
 .cal-nav-btn {
     text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: var(--couleur-fond);
+    border: 1px solid var(--couleur-secondaire);
     padding: 6px 12px;
     color: var(--couleur-principale);
     font-weight: bold;
     border-radius: 4px;
     font-size: 14px;
 }
-.cal-nav-btn:hover { background-color: #e2e6ea; }
+
+.cal-nav-btn:hover {
+    background-color: var(--couleur-secondaire);
+}
 
 .current-week-display {
     position: relative;
@@ -62,10 +65,11 @@
     width: 240px;
     background: white;
     border: 2px solid var(--couleur-principale);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     text-align: center;
 }
+
 .popup-header {
     background: var(--couleur-principale);
     color: white;
@@ -74,24 +78,38 @@
     display: flex;
     justify-content: space-between;
 }
+
 .popup-close {
-    background: red; border: none; color: white; cursor: pointer; width: 20px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 20px;
 }
+
 .popup-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     padding: 5px;
     gap: 2px;
 }
+
 .popup-cell {
     padding: 5px;
     font-size: 12px;
     text-decoration: none;
     color: #333;
 }
-.popup-cell:hover { background-color: #ddd; }
 
-.popup-head-cell { font-weight: bold; font-size: 12px; color: #666; }
+.popup-cell:hover {
+    background-color: #ddd;
+}
+
+.popup-head-cell {
+    font-weight: bold;
+    font-size: 12px;
+    color: #666;
+}
 
 /* --- calendrier --- */
 .schedule-wrapper {
@@ -110,11 +128,15 @@
     font-weight: bold;
     font-size: 14px;
 }
-.time-header { border-right: 1px solid var(--couleur-secondaire); }
+
+.time-header {
+    border-right: 1px solid var(--couleur-secondaire);
+}
 
 .time-axis {
     border-right: 1px solid var(--couleur-secondaire);
 }
+
 .time-label {
     height: var(--slot-height);
     border-bottom: 1px solid #e0e0e0;
@@ -129,15 +151,24 @@
     position: relative;
     border-right: 1px solid var(--couleur-secondaire);
 }
-.day-column:last-child { border-right: none; }
+
+.day-column:last-child {
+    border-right: none;
+}
 
 .bg-slot {
     height: var(--slot-height);
     border-bottom: 1px solid #e0e0e0;
     box-sizing: border-box;
 }
-.bg-slot:nth-child(odd) { background-color: #fff; }
-.bg-slot:nth-child(even) { background-color: #f9f9f9; }
+
+.bg-slot:nth-child(odd) {
+    background-color: #fff;
+}
+
+.bg-slot:nth-child(even) {
+    background-color: #f9f9f9;
+}
 
 .event-card {
     position: absolute;
@@ -151,13 +182,278 @@
     padding: 4px;
     font-size: 11px;
     overflow: hidden;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
     z-index: 10;
     cursor: pointer;
 }
+
 .event-card:hover {
     background-color: #dbe9ff;
     z-index: 20;
 }
-.event-title { font-weight: bold; color: var(--couleur-principale); display: block; }
-.event-sub { color: #555; }
+
+.event-title {
+    font-weight: bold;
+    color: var(--couleur-principale);
+    display: block;
+}
+
+.event-sub {
+    color: #555;
+}
+
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal de sections */
+.container-box {
+    width: 70%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-header h2 {
+    margin-top: 0;
+    color: var(--couleur-principale);
+}
+
+.section,
+.section-alt {
+    padding: 70px 0;
+}
+
+.section {
+    background: #ffffff;
+}
+
+.section-alt {
+    background: #f4f4f4;
+}
+
+.section .container,
+.section-alt .container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Section titles */
+.section-header h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 16px;
+}
+
+.section+.section,
+.section+.section-alt,
+.section-alt+.section,
+.section-alt+.section-alt {
+    margin-top: 0;
+}
+
+.section-alt:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 60px;
+}
+
+.services-liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+
+.service-card {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e7e7e7;
+    transition: 0.25s;
+}
+
+.service-card:hover {
+    background: #ffffff;
+    border-color: #dcdcdc;
+}
+
+.etapes-fonctionnement li {
+    margin: 10px 0;
+    font-size: 17px;
+    color: #444;
+}
+
+.tuteurs-liste {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f3f3f3;
+    border-radius: 6px;
+    color: #777;
+    text-align: center;
+}
+
+/* Style des cartes services */
+.services-liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: 0.2s;
+}
+
+.service-card:hover {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Hero */
+.hero {
+    background: #d10000;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero .btn {
+    background: var(--couleur-fond);
+    color: var(--couleur-principale);
+    padding: 10px 18px;
+    display: inline-block;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+    border: 2px solid var(--couleur-principale);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.2s;
+}
+
+.hero .btn:hover {
+    background: var(--couleur-principale);
+    color: var(--couleur-fond);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* étapes */
+.etapes-fonctionnement li {
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+/* ======== HEADER ========= */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.site-title {
+    font-size: 22px;
+    color: var(--couleur-texte);
+    font-weight: bold;
+    font-family: var(--font-principale);
+}
+
+/* NAVIGATION */
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav a {
+    font-family: var(--font-principale);
+    text-decoration: none;
+    color: var(--couleur-texte);
+    font-size: 15px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
+}
+
+.main-nav a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--couleur-principale);
+}
+
+.main-nav a.active {
+    background: var(--couleur-principale);
+    color: var(--couleur-fond);
+    font-weight: bold;
+    box-shadow: none;
+}
+
+/* ========= FOOTER ========= */
+.footer {
+    background:var(--couleur-fond);
+    border-top: 1px solid var(--couleur-secondaire);
+    padding: 20px 0;
+    margin-top: 40px;
+    font-family: var(--font-principale);
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+.footer-container p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.footer a {
+    color: var(--couleur-fond);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
