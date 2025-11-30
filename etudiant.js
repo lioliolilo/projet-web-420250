@@ -1,23 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const selectService = document.getElementById("service");
     const infoBox = document.getElementById("tuteur-info");
-
     const nomTuteur = document.getElementById("nomTuteur");
-    const specTuteur = document.getElementById("specTuteur");
 
-    selectService.addEventListener("change", function() {
+    selectService.addEventListener("change", function () {
         const option = this.options[this.selectedIndex];
-
         const tuteurs = option.getAttribute("data-tuteurs");
-        const specs = option.getAttribute("data-specialites");
 
         if (!tuteurs || tuteurs.trim() === "") {
-            infoBox.style.display = "none";
+            nomTuteur.innerHTML = "<em>Aucun tuteur disponible</em>";
+            infoBox.style.display = "block";
             return;
         }
 
-        nomTuteur.textContent = tuteurs.replace(/\|/g, ", ");
-        specTuteur.textContent = specs.replace(/\|/g, ", ");
+        const list = tuteurs.split("|").map(t => t.trim());
+
+        nomTuteur.innerHTML = list.map(t => `<div>${t}</div>`).join("");
 
         infoBox.style.display = "block";
     });

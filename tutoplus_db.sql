@@ -92,7 +92,10 @@ INSERT INTO services (nom_service) VALUES
 INSERT INTO service_tuteurs VALUES
 (1, 1), (1, 2),     -- Service 1 -> tuteurs 1 et 2
 (2, 2),             -- Service 2 -> tuteur 2
-(3, 1), (3, 3);     -- Service 3 -> tuteurs 1 et 3
+(3, 1), (3, 3),     -- Service 3 -> tuteurs 1 et 3
+(4, 1), (4, 2),
+(5, 2),
+(6, 3);
 
 -- ======================================================================
 -- Insertions RENDEZ-VOUS

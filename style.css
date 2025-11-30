@@ -429,7 +429,7 @@ body {
 
 /* ========= FOOTER ========= */
 .footer {
-    background:var(--couleur-fond);
+    background: var(--couleur-fond);
     border-top: 1px solid var(--couleur-secondaire);
     padding: 20px 0;
     margin-top: 40px;
@@ -456,4 +456,18 @@ body {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* ======== Espace etudiants ======== */
+#tuteur-info p {
+    margin-bottom: 12px;
+}
+
+#nomTuteur {
+    display: block;     
+    font-weight: normal;
+}
+
+#nomTuteur div {
+    margin-bottom: 6px;
 }
