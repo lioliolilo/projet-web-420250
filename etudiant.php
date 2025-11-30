@@ -79,7 +79,7 @@ try {
 
                     <label for="service"><strong>Service :</strong></label>
                     <select id="service" class="service-select">
-                        <option value="">-- Choisir un service --</option>
+                        <option value="">Choisir un service...</option>
 
                         <?php foreach ($services as $s): ?>
                             <option value="<?= $s['id_service'] ?>" data-tuteurs="<?= htmlspecialchars($s['tuteurs']) ?>"
@@ -90,7 +90,10 @@ try {
                     </select>
 
                     <div id="tuteur-info" class="tuteur-info" style="display:none;">
-                        <p><strong>Tuteur(s) :</strong> <span id="nomTuteur">—</span></p>
+                    </div>
+
+                    <div id="creneauxContainer" class="creneaux-box" style="display:none;">
+                        <div id="creneauxList"></div>
                     </div>
 
                 </div>
