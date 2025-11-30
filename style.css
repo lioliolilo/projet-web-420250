@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: Arial;
-    background: #f4f4f4;
+    background: var(--couleur-fond);
     margin: 0;
     padding: 0;
 }
@@ -29,7 +29,7 @@ main {
 /* --- CALENDIER --- */
 .calendar-content-wrapper {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff;
+    background-color: var(--couleur-fond);
     color: #333;
     margin-left: 10vw;
     margin-right: 10vw;
@@ -43,7 +43,7 @@ main {
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: var(--couleur-fond);
     border: 1px solid #ddd;
     border-radius: 4px;
 }
@@ -99,7 +99,7 @@ main {
 }
 
 .popup-close {
-    background: red;
+    background: var(--couleur-principale);
     border: none;
     color: white;
     cursor: pointer;
@@ -233,7 +233,7 @@ main {
 
 .section-header h2 {
     margin-top: 0;
-    color: var(--couleur-principale);
+    color: var(--couleur-texte);
 }
 
 .section,
@@ -329,6 +329,10 @@ main {
     border-radius: 6px;
     border: 1px solid #ddd;
     transition: 0.2s;
+}
+
+.service-card h3 {
+    color: var(--couleur-principale);
 }
 
 .service-card:hover {
