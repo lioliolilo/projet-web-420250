@@ -58,6 +58,18 @@ CREATE TABLE rendez_vous (
     FOREIGN KEY (id_service) REFERENCES services(id_service) ON DELETE SET NULL
 );
 
+-- TABLE MESSAGES
+CREATE TABLE messages (
+    id_message INT AUTO_INCREMENT PRIMARY KEY,
+    id_tuteur INT NOT NULL,
+    nom VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    sujet VARCHAR(200) NOT NULL,
+    message TEXT NOT NULL,
+    date_envoi TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_tuteur) REFERENCES tuteurs(id_tuteur) ON DELETE CASCADE
+);
+
 -- ======================================================================
 -- Insertions ÉTUDIANTS 
 -- ======================================================================
