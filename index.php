@@ -43,16 +43,14 @@ try {
 
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="index.php">Accueil</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#fonctionnement">Comment ça fonctionne ?</a></li>
                     <li><a href="#tuteurs">Nos tuteurs</a></li>
-                    <li><a href="index.php#contact">Contact</a></li>
-                    <li><a href="demande.php">Demande</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a href="etudiant.php">Espace étudiant</a></li>
                     <li><a href="tuteur.php">Espace tuteur</a></li>
                     <li><a href="admin.php">Admin</a></li>
-                    <li><a href="calendrier.php">Calendrier</a></li>
                 </ul>
             </nav>
         </div>
