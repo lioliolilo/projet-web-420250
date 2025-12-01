@@ -7,29 +7,10 @@
     --slot-height: 50px;
 }
 
-html,
-body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial;
-    background: var(--couleur-fond);
-    margin: 0;
-    padding: 0;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
 /* --- CALENDIER --- */
 .calendar-content-wrapper {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--couleur-fond);
+    background-color: #fff;
     color: #333;
     margin-left: 10vw;
     margin-right: 10vw;
@@ -43,7 +24,7 @@ main {
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: var(--couleur-fond);
+    background-color: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
@@ -99,7 +80,7 @@ main {
 }
 
 .popup-close {
-    background: var(--couleur-principale);
+    background: red;
     border: none;
     color: white;
     cursor: pointer;
@@ -221,6 +202,13 @@ main {
     color: #555;
 }
 
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
 /* Conteneur principal de sections */
 .container-box {
     width: 70%;
@@ -233,7 +221,7 @@ main {
 
 .section-header h2 {
     margin-top: 0;
-    color: var(--couleur-texte);
+    color: var(--couleur-principale);
 }
 
 .section,
@@ -329,10 +317,6 @@ main {
     border-radius: 6px;
     border: 1px solid #ddd;
     transition: 0.2s;
-}
-
-.service-card h3 {
-    color: var(--couleur-principale);
 }
 
 .service-card:hover {
@@ -445,10 +429,10 @@ main {
 
 /* ========= FOOTER ========= */
 .footer {
-    background: var(--couleur-fond);
+    background:var(--couleur-fond);
     border-top: 1px solid var(--couleur-secondaire);
     padding: 20px 0;
-    margin-top: 0;
+    margin-top: 40px;
     font-family: var(--font-principale);
 }
 
@@ -472,49 +456,4 @@ main {
 
 .footer a:hover {
     text-decoration: underline;
-}
-
-/* ======== Espace etudiants ======== */
-#creneauxContainer {
-    margin-top: 25px;
-    padding: 20px;
-    background: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-.tuteur-creneaux {
-    margin-bottom: 25px;
-}
-
-.tuteur-creneaux p {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.btn-creneau {
-    padding: 6px 14px;
-    margin: 5px 4px;
-    border: 1px solid var(--couleur-secondaire);
-    background: white;
-    color: #333;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s, border-color 0.2s, transform 0.15s;
-    font-size: 14px;
-}
-
-.btn-creneau:hover {
-    background: var(--couleur-principale);
-    color: white;
-    border-color: var(--couleur-principale);
-    transform: translateY(-1px);
-}
-
-.btn-creneau.selected {
-    background: var(--couleur-principale);
-    color: white;
-    border-color: var(--couleur-principale);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
