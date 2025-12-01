@@ -72,9 +72,12 @@ INSERT INTO etudiants (nom, prenom, email) VALUES
 -- ======================================================================
 
 INSERT INTO tuteurs (nom, prenom, specialite, email, telephone) VALUES
-('Klein', 'Robert', 'Programmation orientée objet', 'robert.klein@gmail.ca', '514-555-1001'),
-('Smith', 'Julie', 'Développement Web', 'julie.smith@gmail.ca', '514-555-1002'),
-('Doe', 'John', 'Bases de données (SQL)', 'john.doe@gmail.ca', '514-555-1003');
+('Klein', 'Calvin', 'Programmation orientée objet', 'calvin.klein@gmail.ca', '514-555-1001'),
+('Peanuts', 'Snoopie', 'Développement Web', 'snoopie.smith@gmail.ca', '514-555-1002'),
+('Doe', 'John', 'Bases de données (SQL)', 'john.doe@gmail.ca', '514-555-1003'),
+('Doe', 'Jane', 'Mathématique', 'jabe.doe@gmail.ca', '514-555-1003'),
+('Williams', 'Robert', 'Réseautique', 'robert.doe@gmail.ca', '514-555-1003'),
+('Bedroque', 'Lucy', 'Programmation orientée objet', 'lucy.doe@gmail.ca', '514-555-1003');
 
 -- ======================================================================
 -- Insertions SERVICES
@@ -90,12 +93,12 @@ INSERT INTO services (nom_service) VALUES
 
 -- Lier services → plusieurs tuteurs
 INSERT INTO service_tuteurs VALUES
-(1, 1), (1, 2),     -- Service 1 -> tuteurs 1 et 2
+(1, 1), (1, 6),     -- Service 1 -> tuteurs 1 et 2
 (2, 2),             -- Service 2 -> tuteur 2
 (3, 1), (3, 3),     -- Service 3 -> tuteurs 1 et 3
-(4, 1), (4, 2),
-(5, 2),
-(6, 3);
+(4, 4), (4, 2),
+(5, 5),
+(6, 1), (6, 2), (6, 4), (6, 5), (6, 6);
 
 -- ======================================================================
 -- Insertions RENDEZ-VOUS
