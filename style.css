@@ -7,10 +7,30 @@
     --slot-height: 50px;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial;
+    background: var(--couleur-fond);
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 /* --- CALENDIER --- */
 .calendar-content-wrapper {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff;
+    background-color: var(--couleur-fond);
     color: #333;
     margin-left: 10vw;
     margin-right: 10vw;
@@ -24,7 +44,7 @@
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: var(--couleur-fond);
     border: 1px solid #ddd;
     border-radius: 4px;
 }
@@ -80,7 +100,7 @@
 }
 
 .popup-close {
-    background: red;
+    background: var(--couleur-principale);
     border: none;
     color: white;
     cursor: pointer;
@@ -202,13 +222,6 @@
     color: #555;
 }
 
-body {
-    font-family: Arial;
-    background: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
 /* Conteneur principal de sections */
 .container-box {
     width: 70%;
@@ -221,7 +234,7 @@ body {
 
 .section-header h2 {
     margin-top: 0;
-    color: var(--couleur-principale);
+    color: var(--couleur-texte);
 }
 
 .section,
@@ -319,6 +332,10 @@ body {
     transition: 0.2s;
 }
 
+.service-card h3 {
+    color: var(--couleur-principale);
+}
+
 .service-card:hover {
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
@@ -363,8 +380,10 @@ body {
     background: #ffffff;
     border-bottom: 1px solid #ddd;
     padding: 12px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -429,10 +448,10 @@ body {
 
 /* ========= FOOTER ========= */
 .footer {
-    background:var(--couleur-fond);
+    background: var(--couleur-fond);
     border-top: 1px solid var(--couleur-secondaire);
     padding: 20px 0;
-    margin-top: 40px;
+    margin-top: 0;
     font-family: var(--font-principale);
 }
 
@@ -456,4 +475,102 @@ body {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* ======== Espace etudiants ======== */
+#creneauxContainer {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.tuteur-creneaux {
+    margin-bottom: 25px;
+}
+
+.tuteur-creneaux p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.btn-creneau {
+    padding: 6px 14px;
+    margin: 5px 4px;
+    border: 1px solid var(--couleur-secondaire);
+    background: white;
+    color: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    font-size: 14px;
+}
+
+.btn-creneau:hover {
+    background: var(--couleur-principale);
+    color: white;
+    border-color: var(--couleur-principale);
+    transform: translateY(-1px);
+}
+
+.btn-creneau.selected {
+    background: var(--couleur-principale);
+    color: white;
+    border-color: var(--couleur-principale);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* --- form de contact -- */
+.contact-form {
+    max-width: 600px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.form-group label{
+    margin: 0 0 6px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    padding: 10px 18px;
+    background: var(--couleur-principale);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #a80000;
+}
+
+.form-result {
+    min-height: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-result.show {
+    opacity: 1;
 }
